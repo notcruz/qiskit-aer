@@ -202,17 +202,18 @@ const stringmap_t<Gates> State::gateset_({
     {"h", Gates::h},       // Hadamard gate (X + Z / sqrt(2))
     {"sx", Gates::sx},     // Sqrt X gate.
     {"sxdg", Gates::sxdg}, // Inverse Sqrt X gate.
+    {"rx", Gates::rx},       // RX gate (only support k * pi/2 cases)
+    {"ry", Gates::ry},       // RY gate (only support k * pi/2 cases)
+    {"rz", Gates::rz}        // RZ gate (only support k * pi/2 cases)
     // Two-qubit gates
     {"CX", Gates::cx},       // Controlled-X gate (CNOT)
     {"cx", Gates::cx},       // Controlled-X gate (CNOT),
     {"cy", Gates::cy},       // Controlled-Y gate
     {"cz", Gates::cz},       // Controlled-Z gate
     {"swap", Gates::swap},   // SWAP gate
-    {"pauli", Gates::pauli}, // Pauli gate
     {"ecr", Gates::ecr},     // ECR gate
-    {"rx", Gates::rx},       // RX gate (only support k * pi/2 cases)
-    {"ry", Gates::ry},       // RY gate (only support k * pi/2 cases)
-    {"rz", Gates::rz}        // RZ gate (only support k * pi/2 cases)
+    // Pauli
+    {"pauli", Gates::pauli} // Pauli gate
 });
 
 //============================================================================
